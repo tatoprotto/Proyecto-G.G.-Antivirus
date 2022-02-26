@@ -24,7 +24,7 @@
 }
 
 
-/*Navegacion*/
+/*Navegacion (Boostrap) */
 
 .navegacion{
     display: flex;
@@ -67,7 +67,19 @@
 }
 
 
-/*Main Index (Con GRID y media queries)*/
+.pie2{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.993);
+    height: 5rem;
+   align-items: center;
+    margin:4px;
+   margin-top: 30px;
+   color: blanchedalmond;
+   bottom: 0;
+}
+
+/*Main Index*/
 
 .mainIndex{
     display: grid;
@@ -116,17 +128,6 @@
   
 }
 
-.pieDescargas{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.993);
-    height: 5rem;
-   align-items: center;
-    margin:4px;
-   margin-top: 30px;
-   color: blanchedalmond;
-   bottom: 0;
-}
 
 @media screen and (max-width:590px) {
     .mainIndex{
@@ -148,7 +149,7 @@
 
 }
 
-/*Main Download (Con GRID y media queries)*/
+/*Main Download*/
 
 #mainDescargas{
     display: grid;
@@ -169,29 +170,6 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 3.18rem;
-}
-
-@media screen and (max-width:590px) {
-    #mainDescargas{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    #videoIntroduccion iframe{
-        height: 100%;
-        width: 100%;
-        
-    }
-
-    #videoIntroduccion{
-        margin-bottom: 100px;
- 
-    }
-
-    #titularIndex{
-        padding-top: 100px;
-    }
 }
 
 .titularDescargas{
@@ -227,6 +205,29 @@
     margin: 13px;
 }
 
+@media screen and (max-width:590px) {
+    #mainDescargas{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #videoIntroduccion iframe{
+        height: 100%;
+        width: 100%;
+        
+    }
+
+    #videoIntroduccion{
+        margin-bottom: 100px;
+ 
+    }
+
+    #titularIndex{
+        padding-top: 100px;
+    }
+
+}
 
 /*Main Questions*/
 
@@ -267,37 +268,10 @@
     margin-top: 30px;
 }
 
-/*main  contact */
+/*Main Contact*/
 
 form{
-    width:400px;
-    padding: 18px;
-    border-radius: 8px;
-    margin-left:auto;
-    margin-right:auto ;
-    background-color:rgb(184, 184, 184);
-    margin-bottom: 90px;
-}
-
-
-/*General*/
-
-body{
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-}
- 
-button a{
-    text-decoration: none;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
-}
-
-
-/*Formulario*/
-
-form{
-    width:400px;
+    width: 400px;
     padding: 18px;
     border-radius: 8px;
     margin-left:auto;
@@ -309,5 +283,34 @@ form{
 label{
     display: inline-block;
     margin: 10px;
+}
+
+
+@media screen and (max-width:590px) {
+    form{
+        width: 340px;
+        padding: 18px;
+        border-radius: 8px;
+        margin-left:auto;
+        margin-right:auto ;
+        background-color:rgb(184, 184, 184);
+        margin-bottom: 90px;
+    } 
+}
+
+
+
+
+/*General*/
+
+body{
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+    
+}
+ 
+button a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
 }
 
