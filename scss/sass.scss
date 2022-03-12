@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +16,7 @@
     margin-bottom: 11.18rem;
   
     h1 {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: $fuenteLetraTitulares;
       margin-right: 4vw;
     }
   }
@@ -64,17 +66,23 @@
     bottom: 0;
   }
   
-  /*Main Index*/
-  
-  .mainIndex {
+  /*MIXIN Mains GRID*/
+
+  @mixin mainGrid($columns, $rows, $templateAreas){
     display: grid;
-    grid-template-columns: 40% 50%;
-    grid-template-rows: 33% 33% 23%;
-    grid-template-areas: "a1 a2" "a1 a4" "a5 a6";
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    grid-template-areas: $templateAreas;
     height: 31.25vw;
     justify-items: center;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  /*Main Index*/
+  
+  .mainIndex {
+    @include mainGrid(40% 50% , 33% 33% 23% , "a1 a2" "a1 a4" "a5 a6")
   }
   
   #videoIntroduccion {
@@ -127,14 +135,7 @@
   /*Main Download*/
   
   #mainDescargas {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "a1 a1" "a2  a3";
-    height: 31.25rem;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-evenly;
+    @include mainGrid(50% 50% , 50% 50% , "a1 a1" "a2  a3" )
   }
   
   .logoytextoDescargas {
@@ -146,29 +147,28 @@
   }
   
   .titularDescargas {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: $fuenteLetraTitulares;
     font-style: bold;
     grid-area: a1;
   }
   
-  .windowsAndLinux_Padre1 {
-    grid-area: a2;
+  .windowsAndLinux_Base{
     display: flex;
     align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: $fuenteLetraTitulares;
     margin-right: 30px;
     flex-direction: column;
     margin-bottom: 50px;
   }
+
+  .windowsAndLinux_Padre1 {
+    grid-area: a2;
+    @extend .windowsAndLinux_Base
+  }
   
   .windowsAndLinux_Padre2 {
     grid-area: a3;
-    display: flex;
-    align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-right: 30px;
-    flex-direction: column;
-    margin-bottom: 50px;
+    @extend .windowsAndLinux_Base;
   }
   
   .windowsAndLinux_Imagen {
@@ -203,7 +203,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: $fuenteLetraTitulares;
     margin-right: 30px;
     margin-bottom: 43px;
     margin-top: 30px;

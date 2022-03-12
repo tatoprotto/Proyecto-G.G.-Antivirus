@@ -11,7 +11,7 @@
   align-items: center;
   margin-bottom: 11.18rem; }
   .logoytexto h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     margin-right: 4vw; }
 
 .logo {
@@ -51,6 +51,7 @@
   color: blanchedalmond;
   bottom: 0; }
 
+/*MIXIN Mains GRID*/
 /*Main Index*/
 .mainIndex {
   display: grid;
@@ -103,7 +104,7 @@
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   grid-template-areas: "a1 a1" "a2  a3";
-  height: 31.25rem;
+  height: 31.25vw;
   justify-items: center;
   align-items: center;
   justify-content: space-evenly; }
@@ -116,27 +117,23 @@
   margin-bottom: 3.18rem; }
 
 .titularDescargas {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: bold;
   grid-area: a1; }
 
-.windowsAndLinux_Padre1 {
-  grid-area: a2;
+.windowsAndLinux_Base, .windowsAndLinux_Padre1, .windowsAndLinux_Padre2 {
   display: flex;
   align-items: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   margin-right: 30px;
   flex-direction: column;
   margin-bottom: 50px; }
 
+.windowsAndLinux_Padre1 {
+  grid-area: a2; }
+
 .windowsAndLinux_Padre2 {
-  grid-area: a3;
-  display: flex;
-  align-items: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-right: 30px;
-  flex-direction: column;
-  margin-bottom: 50px; }
+  grid-area: a3; }
 
 .windowsAndLinux_Imagen {
   width: 10%;
@@ -160,7 +157,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   margin-right: 30px;
   margin-bottom: 43px;
   margin-top: 30px; }
